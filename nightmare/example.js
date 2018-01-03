@@ -12,10 +12,6 @@ const yahooSearch = () => {
     return new Promise((resolve, reject) => {
         nightmare
             .goto('http://yahoo.co.jp')
-            .wait('#srchtxt')
-            .insert('#srchtxt', 'ENDLAB')
-            .click('#srchbtn')
-            .wait('#mIn')
             .evaluate(() => {
                 var body = document.querySelector('body');
 
